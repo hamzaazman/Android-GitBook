@@ -18,3 +18,5 @@
 
 {% embed url="https://restcountries.com/" %}
 
+{% embed url="https://zenquotes.io/" %}
+
