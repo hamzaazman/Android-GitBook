@@ -104,6 +104,7 @@ dependencies {
 
 ### Hilt - DI
 
+{% code title="Groovy" %}
 ```groovy
 plugins {
   ...
@@ -111,7 +112,9 @@ plugins {
 }
 
 ```
+{% endcode %}
 
+{% code title="Groovy" %}
 ```groovy
 ...
 plugins {
@@ -134,6 +137,7 @@ kapt {
 }
 
 ```
+{% endcode %}
 
 ### Paging
 

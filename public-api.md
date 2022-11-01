@@ -12,3 +12,9 @@
 
 {% embed url="https://finalspaceapi.com/" %}
 
+{% embed url="https://mockaroo.com/" %}
+
+{% embed url="https://random-data-api.com/" %}
+
+{% embed url="https://restcountries.com/" %}
+
