@@ -134,3 +134,48 @@ class NetworkModule {
 
     val differ = AsyncListDiffer(this, differCallback)
 ```
+
+### Network Bound Resource&#x20;
+
+```kotlin
+inline fun <T, K> networkBoundResource(
+    crossinline query: () -> Flow<T>,
+    crossinline fetch: suspend () -> K,
+    crossinline saveFetchResult: suspend (K) -> Unit,
+    crossinline shouldFetch: (T) -> Boolean = { true }
+) = channelFlow<Resource<*>> {
+    val data = query().first()
+    send(Resource.loading(null))
+
+    if (shouldFetch(data)) {
+        try {
+            saveFetchResult(fetch())
+            try {
+                query().collect { send(Resource.success(it)) }
+
+            } catch (e: Exception) {
+                send(Resource.error(data = null, message = e.localizedMessage ?: "Error!"))
+            }
+        } catch (e: Exception) {
+            try {
+                query().collect {
+                    send(
+                        Resource.error(
+                            data = null,
+                            message = e.localizedMessage ?: "Error $it"
+                        )
+                    )
+                }
+            } catch (e: Exception) {
+                send(Resource.error(data = null, message = e.localizedMessage ?: "Error"))
+            }
+        }
+    } else {
+        try {
+            query().collect { send(Resource.success(it)) }
+        } catch (e: Exception) {
+            send(Resource.error(data = null, message = e.localizedMessage ?: "Error"))
+        }
+    }
+}
+```
