@@ -2,7 +2,15 @@
 
 
 
-<figure><img src=".gitbook/assets/search_bar.JPG" alt=""><figcaption><p>Android Search Bar</p></figcaption></figure>
+<div align="left" data-full-width="false">
+
+<figure><img src=".gitbook/assets/search_bar.JPG" alt="" width="283"><figcaption><p>Android Search Bar</p></figcaption></figure>
+
+ 
+
+<figure><img src=".gitbook/assets/search_demo.gif" alt="" width="300"><figcaption><p>Search Bar Demo</p></figcaption></figure>
+
+</div>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -51,3 +59,7 @@
     </com.google.android.material.search.SearchView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
+
+***
+
+{% embed url="https://github.com/hamzaazman/DummyArch" %}
