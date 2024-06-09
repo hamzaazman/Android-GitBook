@@ -40,5 +40,3 @@ abstract class FoodDatabase : RoomDatabase() {
 
 
 ```
-
-Assest klasörün yolunu tanımlayarak bunu createFromAsset içerisinde rooma tanımlamış olduk. Bu şekilde hazır verilerimizi room' a yükleyebiliriz.
