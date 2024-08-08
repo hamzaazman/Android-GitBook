@@ -1,6 +1,6 @@
 # Network Connection
 
-#### ConnectionManager.kt
+### ConnectionManager.kt
 
 ```kotlin
 class ConnectionManager(context: Context, private val externalScope: CoroutineScope) {
@@ -61,9 +61,7 @@ class ConnectionManager(context: Context, private val externalScope: CoroutineSc
 }
 ```
 
-#### MainActivity.kt
-
-
+### MainActivity.kt
 
 ```kotlin
 
@@ -91,9 +89,7 @@ class MainActivity : ComponentActivity() {
 
 ```
 
-#### HomeScreen.kt
-
-
+### HomeScreen.kt
 
 ```kotlin
 @Composable
@@ -152,6 +148,6 @@ fun HomeScreen(isOnline: Boolean, modifier: Modifier = Modifier) {
 
 {% embed url="https://github.com/user-attachments/assets/1c5a0ac5-4f5c-4361-88c2-02de20e05bdd" %}
 
-
+### Github
 
 {% embed url="https://github.com/hamzaazman/NetworkConnection" %}
