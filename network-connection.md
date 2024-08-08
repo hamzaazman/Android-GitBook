@@ -151,3 +151,7 @@ fun HomeScreen(isOnline: Boolean, modifier: Modifier = Modifier) {
 ### Demo
 
 {% embed url="https://github.com/user-attachments/assets/1c5a0ac5-4f5c-4361-88c2-02de20e05bdd" %}
+
+
+
+{% embed url="https://github.com/hamzaazman/NetworkConnection" %}
